@@ -1,0 +1,7 @@
+<h1>Hello World</h1>
+<h2>Parent App Component</h2>
+<label>Enter Parent App Component Value </label>
+<input type="text" #ptext (keyup)="0">
+<p>Value from child component is {{childData}}</p>
+Child Message : {{childMessage}}
+<app-child (childMessageEvent)="receiveMessage($event)" [message]="message" [parentData]="ptext.value" (childEvent)="childData=$event"></app-child>
